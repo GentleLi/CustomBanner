@@ -27,17 +27,22 @@ public class ScaleTransformer implements ViewPager.PageTransformer {
             page.setAlpha(MIN_ALPHA);
             page.setScaleX(MIN_SCALE);
             page.setScaleY(MIN_SCALE);
-            Log.e(TAG,"transformPage page.hashCode()="+page.hashCode());
+            page.setVisibility(View.INVISIBLE);
+//            Log.e(TAG,"transformPage page.hashCode()="+page.hashCode());
+            Log.e(TAG,"position < -1 || position > 1="+page.hashCode());
         } else if (position <= 1) { // [-1,1]
+            page.setVisibility(View.VISIBLE);
             float scaleFactor = Math.max(MIN_SCALE, 1 - Math.abs(position));
             if (position < 0) {
-                Log.d(TAG,"transformPage page.hashCode()="+page.hashCode());
+//                Log.d(TAG,"transformPage page.hashCode()="+page.hashCode());
                 float scaleX = 1 + 0.3f * position;
+                Log.d(TAG,"position < 0" + scaleX);
                 Log.d("google_lenve_fb", "transformPage: scaleX:" + scaleX);
                 page.setScaleX(scaleX);
                 page.setScaleY(scaleX);
             } else {
-                Log.w(TAG,"transformPage page.hashCode()="+page.hashCode());
+                Log.d(TAG,"position >=0");
+//                Log.w(TAG,"transformPage page.hashCode()="+page.hashCode());
                 float scaleX = 1 - 0.3f * position;
                 page.setScaleX(scaleX);
                 page.setScaleY(scaleX);

@@ -5,15 +5,66 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:clipChildren="false"
+    android:clipToPadding="false"
     tools:context="com.gentler.custombanner.ui.MainActivity">
 
-    <android.support.v4.view.ViewPager
-        android:id="@+id/viewpager"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_marginLeft="60dp"
-        android:layout_marginRight="60dp"
-        android:clipChildren="false">
 
-    </android.support.v4.view.ViewPager>
+    <RelativeLayout
+        android:id="@+id/pager_container"
+        android:layout_width="match_parent"
+        android:clipChildren="false"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content">
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_centerHorizontal="true"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:clipToPadding="false"
+            android:clipChildren="false">
+
+        </android.support.v4.view.ViewPager>
+
+
+        <!--<FrameLayout-->
+            <!--android:layout_width="20dp"-->
+            <!--android:background="@color/colorPrimary"-->
+            <!--android:layout_height="200dp">-->
+
+
+        <!--</FrameLayout>-->
+
+
+        <!--<FrameLayout-->
+            <!--android:layout_width="20dp"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:background="@color/colorPrimary"-->
+            <!--android:layout_height="200dp">-->
+
+
+        <!--</FrameLayout>-->
+
+        <ImageView
+            android:layout_width="50dp"
+            android:src="@mipmap/ic_launcher"
+            android:scaleType="centerCrop"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content" />
+
+
+        <ImageView
+            android:layout_width="50dp"
+            android:src="@mipmap/ic_launcher"
+            android:scaleType="centerCrop"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content" />
+
+
+
+    </RelativeLayout>
+
+
+
+
 </RelativeLayout>
