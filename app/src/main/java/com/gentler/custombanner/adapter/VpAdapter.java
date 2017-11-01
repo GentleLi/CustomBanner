@@ -43,7 +43,6 @@ public class VpAdapter extends PagerAdapter {
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
         View view = inflater.inflate(R.layout.vp_item, container, false);
-
         ImageView iv = (ImageView) view.findViewById(R.id.iv);
         iv.setScaleType(ImageView.ScaleType.CENTER_CROP);
         container.addView(view);
