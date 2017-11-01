@@ -43,18 +43,8 @@ public class VpAdapter extends PagerAdapter {
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
         View view = inflater.inflate(R.layout.vp_item, container, false);
-//        ViewGroup.LayoutParams params=new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT);
-//        params.width= ScreenUtils.getScreenWidth(context)/4;
-//        params.height=200;
-//        view.setLayoutParams(params);
+
         ImageView iv = (ImageView) view.findViewById(R.id.iv);
-
-//
-//        LinearLayout.LayoutParams params2=new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT);
-//        params2.width= ScreenUtils.getScreenWidth(context)/4;
-//        params2.height=200;
-//        iv.setLayoutParams(params2);
-
         iv.setScaleType(ImageView.ScaleType.CENTER_CROP);
         container.addView(view);
         BannerModel bean=null;
